@@ -50,7 +50,7 @@ COPY --from=build ["/opt/overviewer/build/overviewer_core", "/opt/overviewer/ove
 COPY --from=build ["/opt/overviewer/build/overviewer.py", "/opt/overviewer/"]
 
 ARG MINECRAFT_CLIENT_URL=https://launcher.mojang.com/v1/objects/7b07fd09d1e3aae1bc7a1304fedc73bfe5d81800/client.jar
-ARG MINECRAFT_CLIENT_VERSION=1.5
+ARG MINECRAFT_CLIENT_VERSION=1.15
 ADD --chown=daemon:daemon ${MINECRAFT_CLIENT_URL} /usr/sbin/.minecraft/versions/${MINECRAFT_CLIENT_VERSION}/${MINECRAFT_CLIENT_VERSION}.jar
 
 USER daemon
