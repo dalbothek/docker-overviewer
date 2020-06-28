@@ -21,10 +21,10 @@ RUN unzip pillow.zip && \
     mv Pillow* pillow
 
 # Download overviewer sources
-ADD https://github.com/overviewer/Minecraft-Overviewer/zipball/master overviewer.zip
+ADD https://github.com/irath96/Minecraft-Overviewer/zipball/block-model overviewer.zip
 RUN unzip overviewer.zip && \
     rm overviewer.zip && \
-    mv overviewer* build
+    mv *erviewer* build
 
 # Copy pillow headers
 RUN mv pillow/src/libImaging/Imaging.h build/ && \
